@@ -1,0 +1,56 @@
+header {
+    position: relative; /* Set positioning context for the pseudo-element */
+    height: 620px;
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;       
+}
+
+header::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./Assets/Homepage_Banner.jpg'); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7; /* Adjust opacity here */
+    z-index: 1; /* Make sure it's behind the text */
+}
+
+.header-title {
+    position: relative; /* Position the text above the background */
+    font-size: 70px; /* Increased text size */
+    color: red; /* Change text color to blue */
+    z-index: 2; /* Keep this above the pseudo-element */
+}
+
+/* Additional styling for nav and other elements */
+nav {
+    text-align: center; /* Center navigation items */
+    margin-top: 20px;  /* Adds space above the navigation */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Add spacing between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: blue; /* Change link color */
+}
+
+.content {
+    padding: 20px; /* Add some padding around content */
+}
